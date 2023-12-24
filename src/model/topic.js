@@ -14,4 +14,4 @@ const topicSchema=new Schema(
     }
 );
 
-export default  mongoose.model.Topic || mongoose.model("Topic")
+export default  mongoose.model.Topic || mongoose.model("Topic",topicSchema)
