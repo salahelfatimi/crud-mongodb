@@ -3,7 +3,7 @@ import { Edit, Trash2 } from "react-feather";
 
 const getData= async()=>{
     try{
-        const res= await fetch('http://localhost:3001/api/topics',{cache:'no-store'})
+        const res= await fetch('https://crud-mongodb-neon.vercel.app/api/topics',{cache:'no-store'})
         if(!res.ok){
             throw new Error('faild to fetch data')
         }
