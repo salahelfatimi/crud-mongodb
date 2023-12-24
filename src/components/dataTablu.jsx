@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Edit, Trash2 } from "react-feather";
+import Delete from "./delet";
 
 const getData= async()=>{
     try{
@@ -27,7 +28,7 @@ export default async function DataTablu(){
                     <td className="py-6 px-4">{ele.fullName}</td>
                     <td className="py-6 px-4">{ele.job}</td>
                     <td className="py-6 px-4 flex gap-4 items-center justify-center">
-                    <Link href={`/delet/${ele._id}`}><Trash2 size={30} className=" stroke-blue-600" /></Link>
+                    <Delete id={ele._id}/>
                     <Link href={`/update/${ele._id}`}><Edit size={30} className="  stroke-red-600"/></Link>
                     </td>
                 </tr>
